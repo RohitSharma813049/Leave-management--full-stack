@@ -1,15 +1,13 @@
 const mongoose = require("mongoose");
 
-async function connectDB() {
+const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017/my-leave-management");
-    console.log("MongoDB connected to My Leave Management Database");
+    await mongoose.connect("mongodb+srv://ss6019243:Pokemon8130493230@cluster0.1keuq.mongodb.net/?appName=Cluster0");
+    console.log("MongoDB connected");
   } catch (error) {
     console.error("MongoDB connection error:", error);
+    process.exit(1);
   }
-}
+};
 
-// Call the function immediately
 connectDB();
-
-module.exports = connectDB;
