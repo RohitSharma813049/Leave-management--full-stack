@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
    server: {
     proxy: {
-      '/api': 'http://localhost:9000',
+      '/api': 'https://leave-management-full-stack-backend.onrender.com',
     },
   },
   resolve: {
