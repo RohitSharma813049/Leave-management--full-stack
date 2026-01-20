@@ -1,6 +1,6 @@
 {
   "name": "my-leave-management-frontend",
-  "proxy": "http://localhost:9000",
+  "proxy": "https://leave-management-full-stack-backend.onrender.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
