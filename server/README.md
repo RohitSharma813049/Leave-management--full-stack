@@ -39,6 +39,6 @@ API base: **http://localhost:9000/api**
 
 Point your axios instance to:
 ```
-http://localhost:8000/api
+https://leave-management-full-stack-backend.onrender.com
 ```
 Attach the JWT in `Authorization: Bearer <token>` for protected routes.
