@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 // Fetch current user using token
-export const fetchMe = createAsyncThunk("auth/fetchMe", async (_, thunkAPI) => {
+export const fetchMe = createAsyncThunk("https://leave-management-full-stack-backend.onrender.com/auth/fetchMe", async (_, thunkAPI) => {
   try {
     const token = localStorage.getItem("token");
     if (!token) return thunkAPI.rejectWithValue("No token found");
@@ -24,7 +24,7 @@ export const loginThunk = createAsyncThunk(
   "auth/login",
   async ({ email, password }, thunkAPI) => {
     try {
-      const res = await axios.post("/api/login", { email, password });
+      const res = await axios.post("https://leave-management-full-stack-backend.onrender.com/api/login", { email, password });
       // Ensure backend returns { token, user }
       return res.data;
     } catch (err) {

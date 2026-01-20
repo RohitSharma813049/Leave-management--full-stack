@@ -22,7 +22,7 @@ export default function Register() {
 
     try {
       console.log("Registering user:", user);
-      const res = await fetch("/api/register", {
+      const res = await fetch("https://leave-management-full-stack-backend.onrender.com/api/register", {
         method: "POST",
         body: JSON.stringify(user),
         headers: { "Content-Type": "application/json" },

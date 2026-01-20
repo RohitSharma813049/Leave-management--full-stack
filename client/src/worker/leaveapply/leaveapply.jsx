@@ -19,7 +19,7 @@ export function LeaveApply() {
     };
 
     try {
-      const res = await fetch("/api/leave/applyleave", {
+      const res = await fetch("https://leave-management-full-stack-backend.onrender.com/api/leave/applyleave", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

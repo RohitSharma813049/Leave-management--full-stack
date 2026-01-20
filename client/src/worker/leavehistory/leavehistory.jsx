@@ -9,7 +9,7 @@ function LeaveHistory() {
     const fetchLeaveHistory = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("/api/leave/all", {
+        const response = await fetch("https://leave-management-full-stack-backend.onrender.com/api/leave/all", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

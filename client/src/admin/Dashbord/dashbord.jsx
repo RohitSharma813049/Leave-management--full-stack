@@ -15,13 +15,13 @@ const Dashboard = () => {
     };
 
     // Fetch total employees
-    fetch("/api/employees/count", { headers })
+    fetch("https://leave-management-full-stack-backend.onrender.com/api/employees/count", { headers })
       .then((res) => res.json())
       .then((data) => setTotalEmployees(data.totalEmployees))
       .catch((err) => console.error("Error fetching employees:", err));
 
     // Fetch leaves
-    fetch("/api/leave/all", { headers })
+    fetch("https://leave-management-full-stack-backend.onrender.com/api/leave/all", { headers })
       .then((res) => res.json())
       .then((data) => {
         console.log("Leaves data:", data);

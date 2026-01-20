@@ -10,7 +10,7 @@ export default function ViewLeave() {
     const fetchLeaves = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("/api/leave/all", {
+        const response = await fetch("https://leave-management-full-stack-backend.onrender.com/api/leave/all", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ export default function ViewLeave() {
     setProcessingId(id);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`/api/leave/${id}/status`, {
+      const response = await fetch(`https://leave-management-full-stack-backend.onrender.com/api/leave/${id}/status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ export default function ViewLeave() {
     setProcessingId(id);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`/api/leave/${id}/status`, {
+      const response = await fetch(`https://leave-management-full-stack-backend.onrender.com/api/leave/${id}/status`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
